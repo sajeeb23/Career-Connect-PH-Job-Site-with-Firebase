@@ -1,8 +1,11 @@
+import Banner from "./Banner";
+import BrowseByCategory from "./BrowseByCategory";
 
 const Home = () => {
     return (
         <div>
-            <p>home</p>
+            <Banner></Banner>
+            <BrowseByCategory></BrowseByCategory>
         </div>
     );
 };
