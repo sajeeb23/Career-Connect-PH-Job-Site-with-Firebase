@@ -1,24 +1,44 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AiOutlineLogin } from 'react-icons/ai';
+import { RiLogoutCircleLine } from 'react-icons/ri';
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
 
-    const  [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
 
     useEffect(() => {
         localStorage.setItem("theme", theme);
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute("data-theme", localTheme)
-    } ,[theme]);
-    
+    }, [theme]);
+
     const handleToggle = (e) => {
-        if(e.target.checked) {
+        if (e.target.checked) {
             setTheme("dark")
-        }  
-        else{
+        }
+        else {
             setTheme("light")
         }
     }
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Logged Out Successfully',
+                    text: 'You have been successfully logged out.',
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
 
     return (
         <div>
@@ -115,7 +135,35 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn bg-[#164863] h-2 text-white">Login</Link>
+                    {user ? (
+                        <div className="hidden justify-end md:flex lg:flex items-center mr-3">
+                            <div className="w-full text-center mr-2 rounded-full">
+                                <div className="flex justify-center items-center text-lg font-semibold text-center">
+                                    {user?.displayName}
+                                </div>
+                            </div>
+                            <div className="avatar">
+                                <div className="left-6 w-12 rounded-full">
+                                    <img src={user?.photoURL || "https://i.ibb.co/cJjvjgj/user.png"} alt="User" onError={(e) => e.target.src = "https://i.ibb.co/cJjvjgj/user.png"} />
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
+
+
+                    {user ? (
+                        <Link className="btn bg-[#164863] h-2 text-white" onClick={handleSignOut}><RiLogoutCircleLine></RiLogoutCircleLine>LogOut</Link>
+                    ) : (
+                        <Link
+                            to="/login"
+                            className="btn bg-[#164863] h-2 text-white"
+                        >
+                            <AiOutlineLogin></AiOutlineLogin>Login
+                        </Link>
+                    )}
+
+
+
                 </div>
                 <label className="swap swap-rotate ml-2">
 
