@@ -5,6 +5,7 @@ import AddJob from "../pages/Jobs/AddJob";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/Signup";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addjob",
-        element: <AddJob></AddJob>
+        element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
       },
       {
         path: "/login",
