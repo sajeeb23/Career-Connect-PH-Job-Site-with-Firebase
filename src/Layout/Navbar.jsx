@@ -165,7 +165,7 @@ const Navbar = () => {
 
 
                 </div>
-                <label className="swap swap-rotate ml-2">
+                <label className=" swap swap-rotate ml-2">
 
                     {/* this hidden checkbox controls the state */}
                     <input type="checkbox" onClick={handleToggle} />
