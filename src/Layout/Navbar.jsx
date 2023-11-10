@@ -48,21 +48,74 @@ const Navbar = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#164863] rounded-box w-52">
+                        <NavLink
+                            to="/"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "bg-[#427D9D] text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                            }
+                        >
+                            Home
+                        </NavLink>
+
+                        <NavLink
+                            to="/addjob"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "bg-[#427D9D] text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                            }
+                        >
+                            Add Job
+                        </NavLink>
+
+                        <NavLink
+                            to="/mypostedjobs"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "bg-[#427D9D] text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                            }
+                        >
+                            My Posted Jobs
+                        </NavLink>
+                        <NavLink
+                            to="/mybids"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "bg-[#427D9D] text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                            }
+                        >
+                            My Bids
+                        </NavLink>
+                        <NavLink
+                            to="/bidrequests"
+                            className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "bg-[#427D9D] text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                            }
+                        >
+                            Bid Requests
+                        </NavLink>
                         </ul>
                     </div>
-                    <Link className="flex gap-2" to={'/'}>
-                        <img src="https://i.ibb.co/7b0WpWz/pngwing-com-26.png" className="w-1/12" alt="" />
-                        <a className=" normal-case text-xl font-bold">CareerConnect</a>
+                    <Link className="flex justify-center items-center gap-2" to={'/'}>
+                        <img src="https://i.ibb.co/7b0WpWz/pngwing-com-26.png" className="w-8 lg:w-1/12" alt="" />
+                        <a className="normal-case text-sm lg:text-xl font-bold">CareerConnect</a>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -106,7 +159,7 @@ const Navbar = () => {
                             My Posted Jobs
                         </NavLink>
                         <NavLink
-                            to="/mycart"
+                            to="/mybids"
                             className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
@@ -118,7 +171,7 @@ const Navbar = () => {
                             My Bids
                         </NavLink>
                         <NavLink
-                            to="/mycart"
+                            to="/bidrequests"
                             className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
@@ -136,14 +189,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {user ? (
-                        <div className="hidden justify-end md:flex lg:flex items-center mr-3">
+                        <div className="justify-end md:flex lg:flex items-center mr-3">
                             <div className="w-full text-center mr-2 rounded-full">
-                                <div className="flex justify-center items-center text-lg font-semibold text-center">
+                                <div className="hidden md:flex lg:flex justify-center items-center text-lg font-semibold text-center">
                                     {user?.displayName}
                                 </div>
                             </div>
                             <div className="avatar">
-                                <div className="left-6 w-12 rounded-full">
+                                <div className="left-6 w-9 lg:w-11 rounded-full">
                                     <img src={user?.photoURL || "https://i.ibb.co/cJjvjgj/user.png"} alt="User" onError={(e) => e.target.src = "https://i.ibb.co/cJjvjgj/user.png"} />
                                 </div>
                             </div>

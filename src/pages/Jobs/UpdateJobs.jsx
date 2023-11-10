@@ -49,7 +49,7 @@ const UpdateJobs = () => {
                 <p className="font-bold text-[#164863] text-6xl text-center my-6">Update Job!</p>
 
                 <form onSubmit={handleUpdateJob}>
-                    <div className="mx-14 px-8 lg:px-80 gap-12 items-center justify-center shadow-2xl py-10">
+                    <div className="mx-10 md:mx-14 lg:mx-14 px-8 lg:px-80 gap-12 items-center justify-center shadow-2xl py-10">
 
 
                         <div className="form-control">

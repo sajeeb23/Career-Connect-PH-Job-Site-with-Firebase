@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { HiOutlineMail } from 'react-icons/hi';
 import { BiSolidCategory } from 'react-icons/bi';
@@ -13,7 +14,7 @@ const JobsCard = ({ job, handleDelete }) => {
     
     return (
         <div>
-            <div className="card w-full h-80 bg-[#164863] text-white mt-4 hover:-translate-y-3 hover:duration-200 hover:cursor-pointer">
+            <div className="card mx-auto w-5/6 md:w-11/12 lg:w-full h-80 bg-[#164863] text-white mt-4 hover:-translate-y-3 hover:duration-200 hover:cursor-pointer">
                 <div className="card-body items-center text-center">
                     <h2 className="card-title font-bold">{job_title}</h2>
                     <p className='flex justify-center items-center gap-1'><HiOutlineMail></HiOutlineMail>{email}</p>

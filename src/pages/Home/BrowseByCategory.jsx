@@ -1,29 +1,28 @@
-import { useState } from "react";
+import { useState } from 'react';
 import 'react-tabs/style/react-tabs.css';
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
+import JobsByCategory from './JobsByCategory';
 
 const BrowseByCategory = () => {
     const [tabIndex, setTabIndex] = useState(0);
+
+    const categories = ['Web Development', 'Digital Marketing', 'Graphics Design'];
 
     return (
         <div className="my-8">
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <div className="font-semibold text-xl text-[#164863]">
                     <TabList>
-                        <Tab>Web Development</Tab>
-                        <Tab>Digital Marketing</Tab>
-                        <Tab>Graphics Design</Tab>
+                        {categories.map((category, index) => (
+                            <Tab key={index}>{category}</Tab>
+                        ))}
                     </TabList>
                 </div>
-                <TabPanel>
-                    Content for Category 1
-                </TabPanel>
-                <TabPanel>
-                    Content for Category 2
-                </TabPanel>
-                <TabPanel>
-                    Content for Category 3
-                </TabPanel>
+                {categories.map((category, index) => (
+                    <TabPanel key={index}>
+                        <JobsByCategory category={category} />
+                    </TabPanel>
+                ))}
             </Tabs>
         </div>
     );
