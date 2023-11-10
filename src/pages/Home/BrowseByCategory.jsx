@@ -9,7 +9,8 @@ const BrowseByCategory = () => {
     const categories = ['Web Development', 'Digital Marketing', 'Graphics Design'];
 
     return (
-        <div className="my-8">
+        <div className="my-8 mx-2">
+            <h1 className="font-bold text-[#164863] text-6xl text-center my-16">Browse By Category</h1>
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <div className="font-semibold text-xl text-[#164863]">
                     <TabList>

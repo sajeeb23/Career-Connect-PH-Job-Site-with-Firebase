@@ -47,7 +47,7 @@ const SignUp = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="card flex-shrink-0 w-screen max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full md:w-screen lg:w-screen max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleSignUp} className="card-body">
             <div className="form-control">
               <label className="label">
