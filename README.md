@@ -1,5 +1,5 @@
 
-Welcome to [Your Job Market Website](https://1234bloody-cushion.surge.sh) - a platform connecting job seekers and employers. Manage job listings, streamline the hiring process, and create a seamless experience for both job applicants and employers.
+Welcome to [CareerConnect](https://1234bloody-cushion.surge.sh) - a platform connecting job seekers and employers. Manage job listings, streamline the hiring process, and create a seamless experience for both job applicants and employers.
 
 ## Features
 
