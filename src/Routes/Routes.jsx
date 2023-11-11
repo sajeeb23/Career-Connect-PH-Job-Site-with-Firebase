@@ -35,12 +35,12 @@ const router = createBrowserRouter([
       {
         path: "/mypostedjobs",
         element: <PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/jobs')
+        loader: () => fetch('https://assignment-11-server-psi-one.vercel.app/jobs')
       },
       {
         path: "/updatejobs/:id",
         element: <PrivateRoute><UpdateJobs></UpdateJobs></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-psi-one.vercel.app/jobs/${params.id}`)
       }
     ]
     },

@@ -6,7 +6,7 @@ const JobsByCategory = ({ category }) => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/jobs/category/${encodeURIComponent(category)}`)
+        fetch(`https://assignment-11-server-psi-one.vercel.app/jobs/category/${encodeURIComponent(category)}`)
             .then((res) => res.json())
             .then((data) => setJobs(data))
             .catch((error) => console.error(error));

@@ -1,8 +1,24 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to [Your Job Market Website](https://1234bloody-cushion.surge.sh) - a platform connecting job seekers and employers. Manage job listings, streamline the hiring process, and create a seamless experience for both job applicants and employers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Job Management:**
+   - Easily add, edit, and delete job postings.
+   - Keep job listings up-to-date for a dynamic job market.
+
+2. **Resume Creation and Application:**
+   - Empower job seekers to create and upload resumes.
+   - Streamlined application process for a hassle-free experience.
+
+3. **Interactive Job Dashboard:**
+   - User-friendly dashboard to track applications and job postings.
+   - Efficiently manage the entire hiring process.
+
+4. **Hiring Workflow:**
+   - Comprehensive workflow for employers to review applications.
+   - Schedule interviews and manage candidate interactions seamlessly.
+
+5. **User-Friendly Interface:**
+   - Intuitive design for a positive user experience.
+   - Simplified navigation for both job seekers and employers.

@@ -25,7 +25,7 @@ const AddJob = () => {
         };
         console.log(newJob);
 
-        fetch('http://localhost:5000/jobs', {
+        fetch('https://assignment-11-server-psi-one.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -89,7 +89,7 @@ const AddJob = () => {
                         <div className="form-control mt-4">
                             <label className="input-group input-group-vertical">
                                 <span className="bg-[#164863] py-1 text-white">Description:</span>
-                                <input type="text" required placeholder="Description" name="description" className="input input-bordered" />
+                                <input type="text" required placeholder="Description" name="description" className="input input-bordered" maxLength="42"/>
                             </label>
                         </div>
                         <div className="form-control mt-4">

@@ -30,7 +30,7 @@ const JobsCard = ({ job, handleDelete }) => {
                     <span className="mt-12 loading text-[#164863] loading-dots loading-lg"></span>
                 </div>
             ) : (
-                <div className="card mx-auto w-5/6 md:w-11/12 lg:w-full h-80 bg-[#164863] text-white mt-4 hover:-translate-y-3 hover:duration-200 hover:cursor-pointer">
+                <div className="card mx-auto w-5/6 md:w-11/12 lg:w-full h-96 md:h-80 lg:h-80 bg-[#164863] text-white mt-4 hover:-translate-y-3 hover:duration-200 hover:cursor-pointer">
                     <div className="card-body items-center text-center">
                         <h2 className="card-title font-bold">{job_title}</h2>
                         <p className='flex justify-center items-center gap-1'><HiOutlineMail />{email}</p>
