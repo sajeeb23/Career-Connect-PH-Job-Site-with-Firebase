@@ -56,7 +56,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Home
@@ -69,7 +69,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Add Job
@@ -82,7 +82,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             My Posted Jobs
@@ -94,7 +94,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             My Bids
@@ -106,7 +106,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Bid Requests
@@ -127,7 +127,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Home
@@ -140,7 +140,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Add Job
@@ -153,7 +153,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             My Posted Jobs
@@ -165,7 +165,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             My Bids
@@ -177,7 +177,7 @@ const Navbar = () => {
                                     ? "pending"
                                     : isActive
                                         ? "bg-[#427D9D] text-white py-2 px-3"
-                                        : "bg-[#164863] hover:text-gray-500 text-white py-2 px-3"
+                                        : "bg-[#164863] hover:text-gray-500 hover:underline text-white py-2 px-3"
                             }
                         >
                             Bid Requests

@@ -45,7 +45,7 @@ const UpdateJobs = () => {
     }
     return (
         <div>
-            <div className="my-6">
+            <div className="my-16">
                 <p className="font-bold text-[#164863] text-6xl text-center my-6">Update Job!</p>
 
                 <form onSubmit={handleUpdateJob}>

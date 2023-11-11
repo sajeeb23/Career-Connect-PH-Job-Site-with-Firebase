@@ -19,7 +19,7 @@ const JobsByCategory = ({ category }) => {
                     <JobsCard key={job._id} job={job} />
                 ))
             ) : (
-                <p>No jobs found for this category.</p>
+                <p className='text-center'>No jobs found for this category!</p>
             )}
         </div>
     );
